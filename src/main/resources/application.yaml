@@ -1,3 +1,14 @@
 spring:
   application:
     name: p3
+
+greeting:
+  enabled: true
+  prefix: "Bună"
+
+utm2026:
+  notification:
+    enabled: true
+    url: http://localhost
+  name: TI
+  descrition: TI description
