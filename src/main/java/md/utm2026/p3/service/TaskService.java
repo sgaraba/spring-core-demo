@@ -2,6 +2,8 @@ package md.utm2026.p3.service;
 
 import jakarta.annotation.PostConstruct;
 import md.utm2026.p3.domain.Task;
+import md.utm2026.p3.service.dto.UserCreatEvent;
+import org.springframework.context.event.EventListener;
 
 import java.util.List;
 
@@ -24,4 +26,8 @@ public class TaskService {
         System.out.println("hello");
     }
 
+    @EventListener
+    public void on(UserCreatEvent event){
+        System.err.println("TaskService recive UserCreatEvent : " + event);
+    }
 }
